@@ -62,6 +62,23 @@ The binaries are called this way:
 - the SDL interface: VisualBoyAdvance
 - the GTK+ interface: gvba
 
+1.1 Fedora
+----------
+Run the following command
+  yum install libpng-devel zlib-devel nasm gtkmm24-devel libglademm24-devel \
+	  SDL SDL-devel
+  CPPFLAGS='-fpermissive' CFLAGS='-fpermissive' ./configure --enable-sdl
+  make
+  sudo make install
+
+You can also try vbam. It's an improved vba emulator packaged in yum repo
+rpmfusion-free-updates.
+Install rpmfusion-free-updates.
+  http://rpmfusion.org/Configuration
+install vbam using yum
+  yum install vbam-common vbam-gtk
+
+
 2. Windows
 ----------
 

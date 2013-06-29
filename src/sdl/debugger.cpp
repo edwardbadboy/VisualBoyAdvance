@@ -1280,7 +1280,7 @@ void debuggerMemoryByte(int n, char **args)
   if(n == 2) {
     u32 addr = 0;
     sscanf(args[1], "%x", &addr);
-    for(int i = 0; i < 16; i++) {
+    for(int ind = 0; ind < 16; ind++) {
       int a = debuggerReadByte(addr);
       int b = debuggerReadByte(addr+1);
       int c = debuggerReadByte(addr+2);
@@ -1316,7 +1316,7 @@ void debuggerMemoryHalfWord(int n, char **args)
     u32 addr = 0;
     sscanf(args[1], "%x", &addr);
     addr = addr & 0xfffffffe;
-    for(int i = 0; i < 16; i++) {
+    for(int ind = 0; ind < 16; ind++) {
       int a = debuggerReadByte(addr);
       int b = debuggerReadByte(addr+1);
       int c = debuggerReadByte(addr+2);
@@ -1352,7 +1352,7 @@ void debuggerMemory(int n, char **args)
     u32 addr = 0;
     sscanf(args[1], "%x", &addr);
     addr = addr & 0xfffffffc;
-    for(int i = 0; i < 16; i++) {
+    for(int ind = 0; ind < 16; ind++) {
       int a = debuggerReadByte(addr);
       int b = debuggerReadByte(addr+1);
       int c = debuggerReadByte(addr+2);
